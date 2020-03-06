@@ -1,0 +1,169 @@
+body {
+  height: 97vh;
+  background-image: url(../images/lfz-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  /* display: flex; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 2rem;
+  /* font-weight: bold; */
+}
+
+header, aside, main {
+  display: flex;
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+aside {
+  height: 100%;
+  flex-direction: column;
+  margin-right: 1rem;
+  justify-content: center;
+}
+
+main {
+  height: 100%;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+aside div {
+  height: 14%;
+  background-color: #6CBBF1;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main div.card {
+  height: 28%;
+  /* flex-basis: 16%; */
+  /* border: 1px solid black; */
+  margin-right: .5%;
+  /* background-image: url(../images/lfz-card.jpg); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.card-front, .card-back {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.card-back {
+  background-image: url(../images/lfz-card.jpg);
+}
+
+.css-logo {
+  background-image: url(../images/css-logo.png);
+}
+
+.docker-logo {
+  background-image: url(../images/docker-logo.jpg);
+}
+
+.github-logo {
+  background-image: url(../images/gitHub-logo.png);
+}
+
+.html-logo {
+  background-image: url(../images/html-logo.png);
+}
+
+.js-logo {
+  background-image: url(../images/js-logo.png);
+}
+
+.mysql-logo {
+  background-image: url(../images/mysql-logo.jpg);
+}
+
+.node-logo {
+  background-image: url(../images/node-logo.png);
+}
+
+.php-logo {
+  background-image: url(../images/php-logo.jpeg);
+}
+
+.react-logo {
+  background-image: url(../images/react-logo.png);
+}
+
+
+.modal-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.modal-content {
+  background-color: rgb(85, 85, 255);
+  border: 5px;
+  width: 25%;
+  height: 25%;
+  border: 5px solid white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal-content button {
+  width: 50%;
+  height: 25%;
+  color: rgb(204, 196, 196);
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.4s ease 0s;
+  color: black;
+}
+
+
+.modal-content button:hover {
+
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.4s ease 0s;
+}
+
+
+.hidden {
+  display: none;
+}
