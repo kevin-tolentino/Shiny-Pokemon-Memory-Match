@@ -1,6 +1,6 @@
 body {
   height: 97vh;
-  background-image: url(../images/lfz-background.jpg);
+  background-image: url(../images/Paladin_Island.png);
   background-size: cover;
   background-repeat: no-repeat;
   /* position: relative; */
@@ -8,6 +8,10 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+}
+
+h1, p {
+  font-family: 'Press Start 2P', cursive;
 }
 
 h1 {
@@ -76,11 +80,11 @@ main div.card {
 }
 
 .card-back {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../images/pokemon\ icon.png);
 }
 
 .css-logo {
-  background-image: url(../images/css-logo.png);
+  background-image: url(../images/bulbasaur.gif);
 }
 
 .docker-logo {
