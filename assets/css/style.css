@@ -80,6 +80,17 @@ main div.card {
   position: absolute;
 }
 
+/* div {
+  transition: all 0.5s ease;
+  background: red;
+  padding: 10px;
+} */
+.card-back:hover {
+  transform: rotate(25deg);
+}
+
+/* :active */
+
 .card-front{
   background-size: contain;
 }
@@ -88,40 +99,40 @@ main div.card {
   background-image: url(../images/pokemon-card-back.jpg);
 }
 
-.css-logo {
+.bulbasaur {
   background-image: url(../images/bulbasaur.gif);
 }
 
-.docker-logo {
-  background-image: url(../images/butterfree-gif.gif);
+.butterfree {
+  background-image: url(../images/butterfree.gif);
 }
 
-.github-logo {
-  background-image: url(../images/charmander-gif.gif);
+.charmander {
+  background-image: url(../images/charmander.gif);
 }
 
-.html-logo {
-  background-image: url(../images/dugtrio-gif.gif);
+.dugtrio {
+  background-image: url(../images/dugtrio.gif);
 }
 
-.js-logo {
-  background-image: url(../images/lapras-gif.gif);
+.lapras {
+  background-image: url(../images/lapras.gif);
 }
 
-.mysql-logo {
-  background-image: url(../images/mew-gif.gif);
+.mew {
+  background-image: url(../images/mew.gif);
 }
 
-.node-logo {
-  background-image: url(../images/pikachu-gif.gif);
+.pikachu {
+  background-image: url(../images/pikachu.gif);
 }
 
-.php-logo {
-  background-image: url(../images/snorlax-gif.gif);
+.snorlax {
+  background-image: url(../images/snorlax.gif);
 }
 
-.react-logo {
-  background-image: url(../images/squirtle-gif.gif);
+.squirtle {
+  background-image: url(../images/squirtle.gif);
 }
 
 

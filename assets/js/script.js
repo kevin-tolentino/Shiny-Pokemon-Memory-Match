@@ -84,7 +84,7 @@ function cardInitializer() {
     var cardBack = document.createElement("div")
     cardBack.classList.add("card-back")
     var innerCardDiv = document.createElement("div");
-    innerCardDiv.classList.add(cardFrontClass, cards[cardIndex]);
+    innerCardDiv.classList.add(cardFrontClass, pokemonCards[cardIndex]);
     cardContainer.appendChild(innerCardDiv);
     cardContainer.appendChild(cardBack);
     gameCards.appendChild(cardContainer);
@@ -93,12 +93,12 @@ function cardInitializer() {
 
 function shuffleCards() {
 
-  cards = cards.slice();
-  for (var i = 0; i < cards.length; i++) {
-    var randomPosition = Math.floor(Math.random() * cards.length)
-    var placeHolder = cards[i];
-    cards[i] = cards[randomPosition];
-    cards[randomPosition] = placeHolder;
+  pokemonCards = pokemonCards.slice();
+  for (var i = 0; i < pokemonCards.length; i++) {
+    var randomPosition = Math.floor(Math.random() * pokemonCards.length)
+    var placeHolder = pokemonCards[i];
+    pokemonCards[i] = pokemonCards[randomPosition];
+    pokemonCards[randomPosition] = placeHolder;
   }
   return cards;
 }
