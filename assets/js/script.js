@@ -39,6 +39,27 @@ var cards = [
   "react-logo",
 ]
 
+var pokemonCards = [
+  "bulbasaur",
+  "bulbasaur",
+  "butterfree",
+  "butterfree",
+  "charmander",
+  "charmander",
+  "dugtrio",
+  "dugtrio",
+  "lapras",
+  "lapras",
+  "mew",
+  "mew",
+  "pikachu",
+  "pikachu",
+  "snorlax",
+  "snorlax",
+  "squirtle",
+  "squirtle"
+]
+
 
 gameCards.addEventListener("click", handleClick);
 

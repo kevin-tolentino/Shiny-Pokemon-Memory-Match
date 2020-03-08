@@ -1,6 +1,6 @@
 body {
   height: 97vh;
-  background-image: url(../images/Paladin_Island.png);
+  background-image: url(../images/paladin-island-w-overlay.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   /* position: relative; */
@@ -15,11 +15,12 @@ h1, p {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1rem;
+  text-align: center;
   /* font-weight: bold; */
 }
 
@@ -79,8 +80,12 @@ main div.card {
   position: absolute;
 }
 
+.card-front{
+  background-size: contain;
+}
+
 .card-back {
-  background-image: url(../images/pokemon\ icon.png);
+  background-image: url(../images/pokemon-card-back.jpg);
 }
 
 .css-logo {
@@ -88,35 +93,35 @@ main div.card {
 }
 
 .docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+  background-image: url(../images/butterfree-gif.gif);
 }
 
 .github-logo {
-  background-image: url(../images/gitHub-logo.png);
+  background-image: url(../images/charmander-gif.gif);
 }
 
 .html-logo {
-  background-image: url(../images/html-logo.png);
+  background-image: url(../images/dugtrio-gif.gif);
 }
 
 .js-logo {
-  background-image: url(../images/js-logo.png);
+  background-image: url(../images/lapras-gif.gif);
 }
 
 .mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+  background-image: url(../images/mew-gif.gif);
 }
 
 .node-logo {
-  background-image: url(../images/node-logo.png);
+  background-image: url(../images/pikachu-gif.gif);
 }
 
 .php-logo {
-  background-image: url(../images/php-logo.jpeg);
+  background-image: url(../images/snorlax-gif.gif);
 }
 
 .react-logo {
-  background-image: url(../images/react-logo.png);
+  background-image: url(../images/squirtle-gif.gif);
 }
 
 
