@@ -78,6 +78,8 @@ main div.card {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  transition: transform .5s linear;
+
 }
 
 /* div {
@@ -85,9 +87,10 @@ main div.card {
   background: red;
   padding: 10px;
 } */
-.card-back:hover {
+.card:hover {
   transform: rotate(25deg);
 }
+
 
 /* :active */
 
@@ -96,6 +99,7 @@ main div.card {
 }
 
 .card-back {
+  background-color: white;
   background-image: url(../images/pokemon-card-back.jpg);
 }
 
