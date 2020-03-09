@@ -1,6 +1,7 @@
 var body = document.querySelector("body")
 
 var cardsArray = document.querySelectorAll(".card-front");
+var cards = document.querySelector(".card")
 var gameCards = document.getElementById("gameCards")
 var modal = document.getElementsByClassName("modal")
 var gamesPlayedNumber = document.getElementById("gamesPlayedNumber");
@@ -128,9 +129,13 @@ function handleClick(event){
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
+    event.target.classList.add("rotateAnimation")
+
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
+    event.target.classList.add("rotateAnimation")
+
     gameCards.removeEventListener("click", handleClick);
     if(firstCardClasses === secondCardClasses){
       gameCards.addEventListener("click", handleClick);
