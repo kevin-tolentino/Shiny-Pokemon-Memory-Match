@@ -68,14 +68,6 @@ startButton.addEventListener("click", startgame);
 
 resetButton.addEventListener("click", resetGame);
 
-function handleStartClick(){
-  startgame()
-}
-
-function handleResetClick(){
-  resetGame();
-}
-
 function cardInitializer() {
   shuffleCards();
 
@@ -124,6 +116,7 @@ function handleClick(event){
   if(event.target.className.indexOf("card-back") === -1){
     return;
   }
+  cards.classList.add("rotateBackCard")
   event.target.classList.add("hidden")
 
   if (!firstCardClicked) {
