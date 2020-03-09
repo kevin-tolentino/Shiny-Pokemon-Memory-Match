@@ -63,9 +63,9 @@ var pokemonCards = [
 
 gameCards.addEventListener("click", handleClick);
 
-startButton.addEventListener("click", handleStartClick);
+startButton.addEventListener("click", startgame);
 
-resetButton.addEventListener("click", handleResetClick);
+resetButton.addEventListener("click", resetGame);
 
 function handleStartClick(){
   startgame()

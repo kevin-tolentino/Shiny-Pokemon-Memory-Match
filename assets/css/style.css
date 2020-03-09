@@ -1,25 +1,25 @@
 body {
-  height: 97vh;
+  height: 98vh;
   background-image: url(../images/paladin-island-w-overlay.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* position: relative; */
-  /* display: flex; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
-h1, p {
+h1, p, button {
   font-family: 'Press Start 2P', cursive;
 }
 
 h1 {
   font-size: 2rem;
+  background-color: rgba(82, 82, 82, 0.527);
+  color: white;
+  text-shadow: black;
+  /* text-decoration-color: black; */
+  outline-color: white;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
   /* font-weight: bold; */
 }
@@ -82,14 +82,21 @@ main div.card {
 
 }
 
+/* .card:active{
+  transform: rotateY(20deg);
+  animation: two 4s infinite;
+  animation-direction: alternate;
+  background-color: #831a4a;
+} */
+
 /* div {
   transition: all 0.5s ease;
   background: red;
   padding: 10px;
 } */
-.card:hover {
+/* .card:hover {
   transform: rotate(25deg);
-}
+} */
 
 
 /* :active */
@@ -162,15 +169,20 @@ main div.card {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  justify-content: center;
+  background-image: url(../images/pokemon-text-box.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 .modal-content button {
-  width: 50%;
+  width: 80%;
   height: 25%;
   color: rgb(204, 196, 196);
   text-transform: uppercase;
   text-decoration: none;
-  background: #60a3bc;
+  /* background: black; */
   padding: 20px;
   border-radius: 50px;
   border: none;
@@ -178,6 +190,9 @@ main div.card {
   color: black;
 }
 
+button {
+  color: white;
+}
 
 .modal-content button:hover {
 
