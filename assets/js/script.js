@@ -116,7 +116,7 @@ function handleClick(event){
   if(event.target.className.indexOf("card-back") === -1){
     return;
   }
-  cards.classList.add("rotateBackCard")
+  // cards.classList.add("rotateBackCard")
   event.target.classList.add("hidden")
 
   if (!firstCardClicked) {
