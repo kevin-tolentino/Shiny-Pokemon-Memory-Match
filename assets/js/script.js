@@ -116,18 +116,20 @@ function handleClick(event){
   if(event.target.className.indexOf("card-back") === -1){
     return;
   }
-  // cards.classList.add("rotateBackCard")
+  event.target.classList.add("rotateBackCard")
+
   event.target.classList.add("hidden")
 
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
-    event.target.classList.add("rotateAnimation")
+    event.target.classList.add("rotateBackCard")
+
 
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
-    event.target.classList.add("rotateAnimation")
+    // event.target.classList.add("rotateBackCard")
 
     gameCards.removeEventListener("click", handleClick);
     if(firstCardClasses === secondCardClasses){
@@ -143,8 +145,8 @@ function handleClick(event){
       }
     } else {
       setTimeout(function(){
-        firstCardClicked.classList.remove("hidden")
-        secondCardClicked.classList.remove("hidden")
+        firstCardClicked.classList.remove("hidden", "rotateBackCard")
+        secondCardClicked.classList.remove("hidden", "rotateBackCard")
         gameCards.addEventListener("click", handleClick);
         firstCardClicked = null;
         secondCardClicked = null;
