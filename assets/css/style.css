@@ -61,14 +61,15 @@ aside div {
 
 main div.card {
   height: 28%;
-  /* flex-basis: 16%; */
-  /* border: 1px solid black; */
   margin-right: .5%;
-  /* background-image: url(../images/lfz-card.jpg); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
+.scene {
+  perspective: 600px;
 }
 
 .card-front, .card-back {
@@ -81,26 +82,6 @@ main div.card {
   transition: transform .5s linear;
 
 }
-
-/* .card:active{
-  transform: rotateY(20deg);
-  animation: two 4s infinite;
-  animation-direction: alternate;
-  background-color: #831a4a;
-} */
-
-/* div {
-  transition: all 0.5s ease;
-  background: red;
-  padding: 10px;
-} */
-/* .card:hover {
-  transform: rotate(25deg);
-} */
-
-
-/* :active */
-
 
 
 .rotateBackCard {

@@ -71,7 +71,9 @@ resetButton.addEventListener("click", resetGame);
 function cardInitializer() {
   shuffleCards();
 
-  for (var cardIndex = 0; cardIndex < cards.length; cardIndex++) {
+  for (var cardIndex = 0; cardIndex < pokemonCards.length; cardIndex++) {
+    var cardScene = document.createElement("div")
+
     var cardContainer = document.createElement("div")
     cardContainer.classList.add("col-2", "card")
     var cardBack = document.createElement("div")
@@ -93,7 +95,7 @@ function shuffleCards() {
     pokemonCards[i] = pokemonCards[randomPosition];
     pokemonCards[randomPosition] = placeHolder;
   }
-  return cards;
+  return pokemonCards;
 }
 
 
@@ -116,15 +118,13 @@ function handleClick(event){
   if(event.target.className.indexOf("card-back") === -1){
     return;
   }
-  event.target.classList.add("rotateBackCard")
-
   event.target.classList.add("hidden")
 
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
-    event.target.classList.add("rotateBackCard")
-
+    // event.target.classList.add("rotateBackCard")
+//transform style: preserve 3d
 
   } else {
     secondCardClicked = event.target;
