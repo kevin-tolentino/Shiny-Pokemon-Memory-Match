@@ -1,6 +1,7 @@
 var body = document.querySelector("body")
 
 var cardsArray = document.querySelectorAll(".card-front");
+var cards = document.querySelector(".card")
 var gameCards = document.getElementById("gameCards")
 var modal = document.getElementsByClassName("modal")
 var gamesPlayedNumber = document.getElementById("gamesPlayedNumber");
@@ -39,31 +40,46 @@ var cards = [
   "react-logo",
 ]
 
+var pokemonCards = [
+  "bulbasaur",
+  "bulbasaur",
+  "butterfree",
+  "butterfree",
+  "charmander",
+  "charmander",
+  "dugtrio",
+  "dugtrio",
+  "lapras",
+  "lapras",
+  "mew",
+  "mew",
+  "pikachu",
+  "pikachu",
+  "snorlax",
+  "snorlax",
+  "squirtle",
+  "squirtle"
+]
+
 
 gameCards.addEventListener("click", handleClick);
 
-startButton.addEventListener("click", handleStartClick);
+startButton.addEventListener("click", startgame);
 
-resetButton.addEventListener("click", handleResetClick);
-
-function handleStartClick(){
-  startgame()
-}
-
-function handleResetClick(){
-  resetGame();
-}
+resetButton.addEventListener("click", resetGame);
 
 function cardInitializer() {
   shuffleCards();
 
-  for (var cardIndex = 0; cardIndex < cards.length; cardIndex++) {
+  for (var cardIndex = 0; cardIndex < pokemonCards.length; cardIndex++) {
+    var cardScene = document.createElement("div")
+
     var cardContainer = document.createElement("div")
     cardContainer.classList.add("col-2", "card")
     var cardBack = document.createElement("div")
     cardBack.classList.add("card-back")
     var innerCardDiv = document.createElement("div");
-    innerCardDiv.classList.add(cardFrontClass, cards[cardIndex]);
+    innerCardDiv.classList.add(cardFrontClass, pokemonCards[cardIndex]);
     cardContainer.appendChild(innerCardDiv);
     cardContainer.appendChild(cardBack);
     gameCards.appendChild(cardContainer);
@@ -72,14 +88,14 @@ function cardInitializer() {
 
 function shuffleCards() {
 
-  cards = cards.slice();
-  for (var i = 0; i < cards.length; i++) {
-    var randomPosition = Math.floor(Math.random() * cards.length)
-    var placeHolder = cards[i];
-    cards[i] = cards[randomPosition];
-    cards[randomPosition] = placeHolder;
+  pokemonCards = pokemonCards.slice();
+  for (var i = 0; i < pokemonCards.length; i++) {
+    var randomPosition = Math.floor(Math.random() * pokemonCards.length)
+    var placeHolder = pokemonCards[i];
+    pokemonCards[i] = pokemonCards[randomPosition];
+    pokemonCards[randomPosition] = placeHolder;
   }
-  return cards;
+  return pokemonCards;
 }
 
 
@@ -107,9 +123,14 @@ function handleClick(event){
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
+    // event.target.classList.add("rotateBackCard")
+//transform style: preserve 3d
+
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
+    // event.target.classList.add("rotateBackCard")
+
     gameCards.removeEventListener("click", handleClick);
     if(firstCardClasses === secondCardClasses){
       gameCards.addEventListener("click", handleClick);
@@ -124,8 +145,8 @@ function handleClick(event){
       }
     } else {
       setTimeout(function(){
-        firstCardClicked.classList.remove("hidden")
-        secondCardClicked.classList.remove("hidden")
+        firstCardClicked.classList.remove("hidden", "rotateBackCard")
+        secondCardClicked.classList.remove("hidden", "rotateBackCard")
         gameCards.addEventListener("click", handleClick);
         firstCardClicked = null;
         secondCardClicked = null;

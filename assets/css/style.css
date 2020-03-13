@@ -1,25 +1,26 @@
 body {
-  height: 97vh;
-  background-image: url(../images/Paladin_Island.png);
+  height: 98vh;
+  background-image: url(../images/paladin-island-w-overlay.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* position: relative; */
-  /* display: flex; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
-h1, p {
+h1, p, button {
   font-family: 'Press Start 2P', cursive;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
+  background-color: rgba(82, 82, 82, 0.527);
+  color: white;
+  text-shadow: black;
+  /* text-decoration-color: black; */
+  outline-color: white;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
   /* font-weight: bold; */
 }
 
@@ -60,14 +61,15 @@ aside div {
 
 main div.card {
   height: 28%;
-  /* flex-basis: 16%; */
-  /* border: 1px solid black; */
   margin-right: .5%;
-  /* background-image: url(../images/lfz-card.jpg); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
+.scene {
+  perspective: 600px;
 }
 
 .card-front, .card-back {
@@ -77,46 +79,94 @@ main div.card {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  transition: transform .5s linear;
+
+}
+
+
+.rotateBackCard {
+  animation-name: rotateBackCard;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.rotateFrontCard {
+  animation-name: rotateFrontCard;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-delay: .5s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes rotateBackCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes rotateFrontCard {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.card-front{
+  background-size: contain;
 }
 
 .card-back {
-  background-image: url(../images/pokemon\ icon.png);
+  background-color: white;
+  background-image: url(../images/pokemon-card-back.jpg);
 }
 
-.css-logo {
+.bulbasaur {
   background-image: url(../images/bulbasaur.gif);
 }
 
-.docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+.butterfree {
+  background-image: url(../images/butterfree.gif);
 }
 
-.github-logo {
-  background-image: url(../images/gitHub-logo.png);
+.charmander {
+  background-image: url(../images/charmander.gif);
 }
 
-.html-logo {
-  background-image: url(../images/html-logo.png);
+.dugtrio {
+  background-image: url(../images/dugtrio.gif);
 }
 
-.js-logo {
-  background-image: url(../images/js-logo.png);
+.lapras {
+  background-image: url(../images/lapras.gif);
 }
 
-.mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+.mew {
+  background-image: url(../images/mew.gif);
 }
 
-.node-logo {
-  background-image: url(../images/node-logo.png);
+.pikachu {
+  background-image: url(../images/pikachu.gif);
 }
 
-.php-logo {
-  background-image: url(../images/php-logo.jpeg);
+.snorlax {
+  background-image: url(../images/snorlax.gif);
 }
 
-.react-logo {
-  background-image: url(../images/react-logo.png);
+.squirtle {
+  background-image: url(../images/squirtle.gif);
 }
 
 
@@ -142,15 +192,20 @@ main div.card {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  justify-content: center;
+  background-image: url(../images/pokemon-text-box.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 .modal-content button {
-  width: 50%;
+  width: 80%;
   height: 25%;
   color: rgb(204, 196, 196);
   text-transform: uppercase;
   text-decoration: none;
-  background: #60a3bc;
+  /* background: black; */
   padding: 20px;
   border-radius: 50px;
   border: none;
@@ -158,6 +213,9 @@ main div.card {
   color: black;
 }
 
+button {
+  color: white;
+}
 
 .modal-content button:hover {
 
