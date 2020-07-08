@@ -232,9 +232,25 @@ button {
 @media screen
   and (max-width: 768px)
  {
+
+  h1 {
+    font-size: .75rem;
+  }
+
 aside {
 flex-direction: row;
+justify-content: space-evenly;
 height: 10%
+}
+
+p {
+  font-size: 8px;
+  color: #ffffff;
+}
+
+aside div {
+  height: 100%;
+  background-color: transparent;
 }
 
 .width-small{
