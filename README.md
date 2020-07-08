@@ -1,5 +1,5 @@
 # poke-match
-🃏 A Pokemon Themed Memory Match Project utilizing HTML5, CSS3, and JavaScript.
+🃏 A Pokémon-themed memory match game with statistic tracking and card GIF images.
 
 _Disclaimer: Please note that this project is for demonstration purposes only. All rights belong to their respective owners. I do not own any of this content._ 
 
