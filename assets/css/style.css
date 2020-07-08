@@ -1,8 +1,11 @@
+html{
+  background-image: url(../images/paladin-island-w-overlay.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   height: 98vh;
-  background-image: url(../images/paladin-island-w-overlay.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 h1, p, button {
@@ -18,9 +21,9 @@ h1 {
   outline-color: white;
 }
 
-p {
-  font-size: 1.5rem;
+aside p {
   text-align: center;
+  color: white;
   /* font-weight: bold; */
 }
 
@@ -52,7 +55,7 @@ main {
 
 aside div {
   height: 14%;
-  background-color: #6CBBF1;
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: .5rem;
   display: flex;
   align-items: center;
@@ -133,6 +136,10 @@ main div.card {
   background-image: url(../images/pokemon-card-back.jpg);
 }
 
+.card-back:hover {
+  cursor: pointer;
+}
+
 .bulbasaur {
   background-image: url(../images/bulbasaur.gif);
 }
@@ -181,16 +188,14 @@ main div.card {
 }
 
 .modal-content {
-  background-color: rgb(85, 85, 255);
   border: 5px;
-  width: 25%;
-  height: 25%;
+  width: 820px;
+  height: 425px;
   border: 5px solid white;
   text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
   justify-content: center;
   background-image: url(../images/pokemon-text-box.png);
@@ -217,6 +222,10 @@ button {
   color: white;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .modal-content button:hover {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -234,7 +243,7 @@ button {
  {
 
   h1 {
-    font-size: .75rem;
+    font-size: 14px;
   }
 
 aside {
@@ -259,5 +268,10 @@ aside div {
 
 .row-2 {
 flex-direction: column
+}
+
+.modal-content {
+  width: 92%;
+  height: 27%;
 }
  }
