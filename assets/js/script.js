@@ -153,8 +153,8 @@ function resetCards(){
 function resetGame() {
   attempts = 0;
   matches = 0;
-  displayStats();
   gamesPlayed++;
+  displayStats();
   modal[2].classList.add("hidden");
   modal[3].classList.add("hidden");
   resetCards();
