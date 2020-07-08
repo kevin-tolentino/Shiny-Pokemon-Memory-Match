@@ -1,5 +1,5 @@
+var aside = document.querySelector("aside")
 var body = document.querySelector("body")
-
 var cardsArray = document.querySelectorAll(".card-front");
 var cards = document.querySelector(".card")
 var gameCards = document.getElementById("gameCards")
@@ -19,26 +19,6 @@ var matches = 0;
 var maxMatches = 9;
 var gamesPlayed = 0;
 
-var cards = [
-  "css-logo",
-  "css-logo",
-  "docker-logo",
-  "docker-logo",
-  "github-logo",
-  "github-logo",
-  "html-logo",
-  "html-logo",
-  "js-logo",
-  "js-logo",
-  "mysql-logo",
-  "mysql-logo",
-  "node-logo",
-  "node-logo",
-  "php-logo",
-  "php-logo",
-  "react-logo",
-  "react-logo",
-]
 
 var pokemonCards = [
   "bulbasaur",
@@ -158,6 +138,7 @@ function handleClick(event){
 }
 
 function startgame(){
+  aside.classList.remove('display-none')
   modal[0].classList.add("hidden");
   modal[1].classList.add("hidden");
   cardInitializer();

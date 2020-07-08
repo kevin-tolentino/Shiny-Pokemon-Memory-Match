@@ -71,6 +71,10 @@ main div.card {
   position: relative;
 }
 
+.display-none{
+  display: none;
+}
+
 .scene {
   perspective: 600px;
 }
@@ -83,7 +87,6 @@ main div.card {
   background-position: center;
   position: absolute;
   transition: transform .5s linear;
-
 }
 
 
