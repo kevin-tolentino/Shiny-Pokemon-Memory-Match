@@ -218,7 +218,6 @@ button {
 }
 
 .modal-content button:hover {
-
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -229,3 +228,20 @@ button {
 .hidden {
   display: none;
 }
+
+@media screen
+  and (max-width: 768px)
+ {
+aside {
+flex-direction: row;
+height: 10%
+}
+
+.width-small{
+  width: 100%;
+}
+
+.row-2 {
+flex-direction: column
+}
+ }
