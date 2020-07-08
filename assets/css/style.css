@@ -16,15 +16,12 @@ h1 {
   font-size: 2rem;
   background-color: rgba(82, 82, 82, 0.527);
   color: white;
-  text-shadow: black;
-  /* text-decoration-color: black; */
   outline-color: white;
 }
 
 aside p {
   text-align: center;
   color: white;
-  /* font-weight: bold; */
 }
 
 header, aside, main {
@@ -46,7 +43,6 @@ aside {
 
 main {
   height: 100%;
-  /* border: 1px solid black; */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -71,14 +67,6 @@ main div.card {
   position: relative;
 }
 
-.display-none{
-  display: none;
-}
-
-.scene {
-  perspective: 600px;
-}
-
 .card-front, .card-back {
   height: 100%;
   width: 100%;
@@ -87,47 +75,6 @@ main div.card {
   background-position: center;
   position: absolute;
   transition: transform .5s linear;
-}
-
-
-.rotateBackCard {
-  animation-name: rotateBackCard;
-  animation-duration: .5s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: none;
-  animation-play-state: running;
-}
-
-.rotateFrontCard {
-  animation-name: rotateFrontCard;
-  animation-duration: .5s;
-  animation-timing-function: ease-out;
-  animation-delay: .5s;
-  animation-direction: alternate;
-  animation-iteration-count: 1;
-  animation-fill-mode: none;
-  animation-play-state: running;
-}
-
-@keyframes rotateBackCard {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(90deg);
-  }
-}
-
-@keyframes rotateFrontCard {
-  0% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
 }
 
 .card-front{
@@ -213,7 +160,6 @@ main div.card {
   color: rgb(204, 196, 196);
   text-transform: uppercase;
   text-decoration: none;
-  /* background: black; */
   padding: 20px;
   border-radius: 50px;
   border: none;

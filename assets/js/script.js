@@ -50,10 +50,7 @@ resetButton.addEventListener("click", resetGame);
 
 function cardInitializer() {
   shuffleCards();
-
   for (var cardIndex = 0; cardIndex < pokemonCards.length; cardIndex++) {
-    var cardScene = document.createElement("div")
-
     var cardContainer = document.createElement("div")
     cardContainer.classList.add("col-2", "card")
     var cardBack = document.createElement("div")
@@ -103,14 +100,11 @@ function handleClick(event){
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
-    // event.target.classList.add("rotateBackCard")
-//transform style: preserve 3d
+
 
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
-    // event.target.classList.add("rotateBackCard")
-
     gameCards.removeEventListener("click", handleClick);
     if(firstCardClasses === secondCardClasses){
       gameCards.addEventListener("click", handleClick);
@@ -138,7 +132,7 @@ function handleClick(event){
 }
 
 function startgame(){
-  aside.classList.remove('display-none')
+  aside.classList.remove("hidden")
   modal[0].classList.add("hidden");
   modal[1].classList.add("hidden");
   cardInitializer();
