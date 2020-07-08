@@ -1,5 +1,5 @@
+var aside = document.querySelector("aside")
 var body = document.querySelector("body")
-
 var cardsArray = document.querySelectorAll(".card-front");
 var cards = document.querySelector(".card")
 var gameCards = document.getElementById("gameCards")
@@ -19,26 +19,6 @@ var matches = 0;
 var maxMatches = 9;
 var gamesPlayed = 0;
 
-var cards = [
-  "css-logo",
-  "css-logo",
-  "docker-logo",
-  "docker-logo",
-  "github-logo",
-  "github-logo",
-  "html-logo",
-  "html-logo",
-  "js-logo",
-  "js-logo",
-  "mysql-logo",
-  "mysql-logo",
-  "node-logo",
-  "node-logo",
-  "php-logo",
-  "php-logo",
-  "react-logo",
-  "react-logo",
-]
 
 var pokemonCards = [
   "bulbasaur",
@@ -70,10 +50,7 @@ resetButton.addEventListener("click", resetGame);
 
 function cardInitializer() {
   shuffleCards();
-
   for (var cardIndex = 0; cardIndex < pokemonCards.length; cardIndex++) {
-    var cardScene = document.createElement("div")
-
     var cardContainer = document.createElement("div")
     cardContainer.classList.add("col-2", "card")
     var cardBack = document.createElement("div")
@@ -123,14 +100,11 @@ function handleClick(event){
   if (!firstCardClicked) {
     firstCardClicked = event.target;
     firstCardClasses = firstCardClicked.previousElementSibling.className
-    // event.target.classList.add("rotateBackCard")
-//transform style: preserve 3d
+
 
   } else {
     secondCardClicked = event.target;
     secondCardClasses = secondCardClicked.previousElementSibling.className;
-    // event.target.classList.add("rotateBackCard")
-
     gameCards.removeEventListener("click", handleClick);
     if(firstCardClasses === secondCardClasses){
       gameCards.addEventListener("click", handleClick);
@@ -158,6 +132,7 @@ function handleClick(event){
 }
 
 function startgame(){
+  aside.classList.remove("hidden")
   modal[0].classList.add("hidden");
   modal[1].classList.add("hidden");
   cardInitializer();
@@ -172,8 +147,8 @@ function resetCards(){
 function resetGame() {
   attempts = 0;
   matches = 0;
-  displayStats();
   gamesPlayed++;
+  displayStats();
   modal[2].classList.add("hidden");
   modal[3].classList.add("hidden");
   resetCards();
