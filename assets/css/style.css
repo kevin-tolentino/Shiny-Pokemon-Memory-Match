@@ -151,7 +151,6 @@ main div.card {
   background-image: url(../images/pokemon-text-box.png);
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 .modal-content button {
@@ -165,6 +164,10 @@ main div.card {
   border: none;
   transition: all 0.4s ease 0s;
   color: black;
+}
+
+.disclaimer {
+  font-size: 7px;
 }
 
 button {
@@ -193,6 +196,10 @@ button:hover {
 
   h1 {
     font-size: 14px;
+  }
+
+  .disclaimer {
+  font-size: 4px;
   }
 
 aside {
